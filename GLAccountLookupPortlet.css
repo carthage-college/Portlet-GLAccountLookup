@@ -1,0 +1,9 @@
+.GLAccountLookupPortlet_AccountOverBudget
+{
+	color: Red
+}
+
+.GLAccountLookupPortlet_AccountUnderBudget
+{
+	color: Black
+}

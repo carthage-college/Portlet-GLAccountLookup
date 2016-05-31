@@ -1,0 +1,309 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <ProjectType>Local</ProjectType>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{AF3D2063-DEC9-4EAA-959A-5CA8DA8EA6F8}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ApplicationIcon>
+    </ApplicationIcon>
+    <AssemblyKeyContainerName>
+    </AssemblyKeyContainerName>
+    <AssemblyName>Portlet.GLAccountLookup</AssemblyName>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
+    <DefaultClientScript>JScript</DefaultClientScript>
+    <DefaultHTMLPageLayout>Grid</DefaultHTMLPageLayout>
+    <DefaultTargetSchema>IE50</DefaultTargetSchema>
+    <DelaySign>false</DelaySign>
+    <OutputType>Library</OutputType>
+    <RootNamespace>Portlet.GLAccountLookup</RootNamespace>
+    <RunPostBuildEvent>OnBuildSuccess</RunPostBuildEvent>
+    <StartupObject>
+    </StartupObject>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <IsWebBootstrapper>true</IsWebBootstrapper>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <TargetFrameworkProfile />
+    <PublishUrl>http://localhost/Portlet.GLAccountLookup/</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Web</InstallFrom>
+    <UpdateEnabled>true</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugSymbols>true</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn>
+    </NoWarn>
+    <Optimize>false</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>full</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>TRACE</DefineConstants>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugSymbols>false</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn>
+    </NoWarn>
+    <Optimize>true</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>none</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CRM">
+      <HintPath>..\..\..\..\bin\CRM.dll</HintPath>
+    </Reference>
+    <Reference Include="CUS.OdbcConnectionClass3">
+      <HintPath>..\..\..\..\bin\CUS.OdbcConnectionClass3.dll</HintPath>
+    </Reference>
+    <Reference Include="ERP">
+      <HintPath>..\..\..\..\bin\ERP.dll</HintPath>
+    </Reference>
+    <Reference Include="Jenzabar.Common">
+      <HintPath>..\..\..\..\bin\Jenzabar.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Jenzabar.Portal.Framework">
+      <HintPath>..\..\..\..\bin\Jenzabar.Portal.Framework.dll</HintPath>
+    </Reference>
+    <Reference Include="Jenzabar.Portal.Framework.Web">
+      <HintPath>..\..\..\..\bin\Jenzabar.Portal.Framework.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="Jenzabar.Portal.Web">
+      <HintPath>..\..\..\..\bin\Jenzabar.Portal.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="System">
+      <Name>System</Name>
+    </Reference>
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data">
+      <Name>System.Data</Name>
+    </Reference>
+    <Reference Include="System.Drawing">
+      <Name>System.Drawing</Name>
+    </Reference>
+    <Reference Include="System.Web">
+      <Name>System.Web</Name>
+    </Reference>
+    <Reference Include="System.Xml">
+      <Name>system.xml</Name>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="AccountSelection.ascx" />
+    <Content Include="BalanceTransactionDetail.ascx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="BudgetToActual.ascx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="Default.ascx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="ViewOtherInfo.aspx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="ViewOtherInformation.ascx" />
+    <Content Include="GLAccountLookupPortlet.css" />
+    <Compile Include="AccountSelection.ascx.cs">
+      <DependentUpon>AccountSelection.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BalanceTransactionDetail.ascx.cs">
+      <DependentUpon>BalanceTransactionDetail.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BudgetToActual.ascx.cs">
+      <DependentUpon>BudgetToActual.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.ascx.cs">
+      <DependentUpon>Default.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="getBudgetStatus.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="getEmailAddresses.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="getERPPortletProperties.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="getGeneralLedgers.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="getOtherTransactionInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="getPartialAccountElements.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="getTransactionInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GetValidAccountCodes.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GLAccountLookupNameValueProvider.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GLAccountLookupPortlet.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GLALPConstants.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GLALPMessages.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ViewOtherInfo.aspx.cs">
+      <DependentUpon>ViewOtherInfo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ViewOtherInformation.ascx.cs">
+      <DependentUpon>ViewOtherInformation.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <EmbeddedResource Include="AccountSelection.ascx.resx">
+      <DependentUpon>AccountSelection.ascx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BalanceTransactionDetail.ascx.resx">
+      <DependentUpon>BalanceTransactionDetail.ascx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BudgetToActual.ascx.resx">
+      <DependentUpon>BudgetToActual.ascx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Default.ascx.resx">
+      <DependentUpon>Default.ascx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewOtherInfo.aspx.resx">
+      <DependentUpon>ViewOtherInfo.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewOtherInformation.ascx.resx">
+      <DependentUpon>ViewOtherInformation.ascx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <!--<ProjectReference Include="..\..\..\..\..\Applications\CRM\CRM.csproj">
+      <Project>{F0788131-E7B7-42FE-80F3-F11E9B4B125B}</Project>
+      <Name>CRM</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\..\Applications\ERP\ERP.csproj">
+      <Project>{C7D6C672-E1DB-42B9-B9E3-1EEFF6299A31}</Project>
+      <Name>ERP</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\..\Common\Common.csproj">
+      <Project>{33657BA8-B822-43AA-AFAF-3B6E87220E18}</Project>
+      <Name>Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\..\Framework\Framework.Web\Framework.Web.csproj">
+      <Project>{F302708B-2A9F-4443-A69E-872F30F47A74}</Project>
+      <Name>Framework.Web</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\..\Framework\Framework\Framework.csproj">
+      <Project>{16694C4E-17E1-4508-A99C-CCF1BDD950C6}</Project>
+      <Name>Framework</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\Portal.csproj">
+      <Project>{FD3BE40C-FF85-49BB-96D1-484012A5150D}</Project>
+      <Name>Portal</Name>
+    </ProjectReference>-->
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+    <PostBuildEvent>
+IF NOT $(ConfigurationName) == Release cd $(TargetDir)
+IF NOT $(ConfigurationName) == Release copy /y "$(TargetName).*" "$(ProjectDir)..\..\..\..\bin\"
+IF $(ConfigurationName) == Release copy /y "$(TargetName).*" "$(ProjectDir)..\..\..\..\bin\"
+if not $(ConfigurationName)== Debug exit
+if "$(DevStaging)"=="" exit
+pushd $(DevStaging)
+copy /y $(TargetPath)  .\bin
+</PostBuildEvent>
+  </PropertyGroup>
+</Project>
