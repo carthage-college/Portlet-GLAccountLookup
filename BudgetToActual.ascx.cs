@@ -646,7 +646,8 @@ namespace Jenzabar.CRM.Staff.Web.Portlets.GLAccountLookupPortlet
 					
 				if (bl.Accounts != null)
 				{	
-					this.lblPeriod.Text = bl.Period.ToString();
+					//this.lblPeriod.Text = bl.Period.ToString();
+                    this.lblPeriod.Text = String.Format("Fiscal Year {0} {1}", this.ParentPortlet.PortletViewState["Year"].ToString(), bl.Period.ToString());
 					this.lblPeriod.Font.Bold = true;
 					this.ParentPortlet.PortletViewState["BeginPeriodDate"] = bl.BeginPeriod.ToString();
 					this.ParentPortlet.PortletViewState["EndPeriodDate"] = bl.EndPeriod.ToString();

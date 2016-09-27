@@ -150,8 +150,10 @@ namespace Jenzabar.CRM.Staff.Web.Portlets.GLAccountLookupPortlet
 					
 				if (tl.Transactions != null)
 				{
-					this.lblPeriod.Text = tl.Period.ToString();
+					//this.lblPeriod.Text = tl.Period.ToString();
                     /**************************     Carthage modifications      ***********************/
+                    this.lblPeriod.Text = String.Format("Fiscal Year {0} {1}", this.ParentPortlet.PortletViewState["Year"].ToString(), tl.Period.ToString());
+
                     //this.dgBalanceTranDetail.DataSource = CreateDataSource();
                     this.dgBalanceTranDetail.DataSource = CreateDataSource(
                         this.ParentPortlet.PortletViewState["Status"].ToString(),
@@ -222,7 +224,7 @@ namespace Jenzabar.CRM.Staff.Web.Portlets.GLAccountLookupPortlet
                     SELECT
 	                    a.jrnl_ref, a.jrnl_no, a.ent_no, a.amt, TO_CHAR(c.jrnl_date,'%m/%d/%Y') AS jrnl_date, b.descr,
                         CASE b.stat WHEN 'P' THEN 'Actual' WHEN 'E' THEN 'Encumbered' ELSE TRIM(b.stat) END AS stat,
-                        c.amt_type, c.fscl_mo, TRIM(d.fullname) AS document_name
+                        c.amt_type, c.fscl_mo, TRIM(d.fullname) AS vendor_name, b.doc_ref AS document_ref, b.doc_no AS document_no, b.doc_id AS vendor_id
                     FROM
 	                    gltr_rec    a   INNER JOIN  gle_rec b   ON  a.jrnl_ref  =   b.jrnl_ref
 									                            AND a.jrnl_no   =   b.jrnl_no
@@ -270,22 +272,31 @@ namespace Jenzabar.CRM.Staff.Web.Portlets.GLAccountLookupPortlet
 
             //Create the column in the data table and add bound column to the data grid
             dtBalDetail.Columns.Add(new DataColumn("jrnl_ref", typeof(string)));
-            this.dgBalanceTranDetail.Columns.Add(CreateBoundColumn("jrnl_ref", "Journal Ref.", HorizontalAlign.Left, HorizontalAlign.Left, true, false, false));
+            this.dgBalanceTranDetail.Columns.Add(CreateBoundColumn("jrnl_ref", "Journal Ref.", HorizontalAlign.Left, HorizontalAlign.Left, true, false, true));
 
             dtBalDetail.Columns.Add(new DataColumn("jrnl_no", typeof(string)));
-            this.dgBalanceTranDetail.Columns.Add(CreateBoundColumn("jrnl_no", "Journal No.", HorizontalAlign.Left, HorizontalAlign.Left, true, false, false));
+            this.dgBalanceTranDetail.Columns.Add(CreateBoundColumn("jrnl_no", "Journal No.", HorizontalAlign.Left, HorizontalAlign.Left, true, false, true));
 
             dtBalDetail.Columns.Add(new DataColumn("ent_no", typeof(string)));
-            this.dgBalanceTranDetail.Columns.Add(CreateBoundColumn("ent_no", "Entry No.", HorizontalAlign.Left, HorizontalAlign.Left, true, false, false));
+            this.dgBalanceTranDetail.Columns.Add(CreateBoundColumn("ent_no", "Entry No.", HorizontalAlign.Left, HorizontalAlign.Left, true, false, true));
+
+            dtBalDetail.Columns.Add(new DataColumn("document_ref", typeof(string)));
+            this.dgBalanceTranDetail.Columns.Add(CreateBoundColumn("document_ref", "Document Ref.", HorizontalAlign.Center, HorizontalAlign.Left, true, false, true));
+
+            dtBalDetail.Columns.Add(new DataColumn("document_no", typeof(string)));
+            this.dgBalanceTranDetail.Columns.Add(CreateBoundColumn("document_no", "Document No.", HorizontalAlign.Center, HorizontalAlign.Left, true, false, true));
 
             dtBalDetail.Columns.Add(new DataColumn("fscl_mo", typeof(string)));
-            this.dgBalanceTranDetail.Columns.Add(CreateBoundColumn("fscl_mo", "Fiscal Mo.", HorizontalAlign.Left, HorizontalAlign.Left, true, false, true));
+            this.dgBalanceTranDetail.Columns.Add(CreateBoundColumn("fscl_mo", "Fiscal Mo.", HorizontalAlign.Left, HorizontalAlign.Left, true, false, false));
 
             dtBalDetail.Columns.Add(new DataColumn("jrnl_date", typeof(string)));
             this.dgBalanceTranDetail.Columns.Add(CreateBoundColumn("jrnl_date", "Date", HorizontalAlign.Center, HorizontalAlign.Center, true, false, true));
 
-            dtBalDetail.Columns.Add(new DataColumn("document_name", typeof(string)));
-            this.dgBalanceTranDetail.Columns.Add(CreateBoundColumn("document_name", "Document Name", HorizontalAlign.Center, HorizontalAlign.Left, true, false, true));
+            dtBalDetail.Columns.Add(new DataColumn("vendor_id", typeof(string)));
+            this.dgBalanceTranDetail.Columns.Add(CreateBoundColumn("vendor_id", "Vendor ID", HorizontalAlign.Center, HorizontalAlign.Left, true, false, true));
+
+            dtBalDetail.Columns.Add(new DataColumn("vendor_name", typeof(string)));
+            this.dgBalanceTranDetail.Columns.Add(CreateBoundColumn("vendor_name", "Vendor Name", HorizontalAlign.Center, HorizontalAlign.Left, true, false, true));
 
             dtBalDetail.Columns.Add(new DataColumn("descr", typeof(string)));
             this.dgBalanceTranDetail.Columns.Add(CreateBoundColumn("descr", "Description", HorizontalAlign.Center, HorizontalAlign.Left, true, false, true));
